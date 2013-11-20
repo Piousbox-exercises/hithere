@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Wed, 20 Nov 2013 13:56:17 -0800
+Source: hithere
+Binary: hithere
+Architecture: source i386
+Version: 1.0-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: Lars Wirzenius <liw@liw.fi>
+Changed-By: piousbox <piousbox@piousbox-laptop>
+Description: 
+ hithere    - greet user
+Changes: 
+ hithere (1.0-1) UNRELEASED; urgency=low
+ .
+   * Initial release. (Closes: #XXXXXX)
+Checksums-Sha1: 
+ 66b53fdc4425938adf775d3260b85f1660e1a614 658 hithere_1.0-1.dsc
+ 6bc2deed3896d82976f365ed573a53c9db341f55 616 hithere_1.0.orig.tar.gz
+ ccebe79cd51c66983928ff2d42394c2297011de3 721 hithere_1.0-1.debian.tar.gz
+ 3391e3f31b7342a555bf1d503a09a6b83ed47bf4 2840 hithere_1.0-1_i386.deb
+Checksums-Sha256: 
+ 9c8b470ae88f9b02d17a634698e03fc18b7533bfe85b017462f9f909c5cfb880 658 hithere_1.0-1.dsc
+ 4f6953cd79b0a3902b6df8985466a9f43a8b7a216eacffaade09c74e9d774d46 616 hithere_1.0.orig.tar.gz
+ 12112a6c73b5450c7308fe44930af799accc00624a596d752786edf03be7e76b 721 hithere_1.0-1.debian.tar.gz
+ 30e74dad14ef4134ce47094b5e208f5af006edae6c353147fde6b877f1125469 2840 hithere_1.0-1_i386.deb
+Files: 
+ 370688123e6a1a61296f07e03dd25965 658 misc optional hithere_1.0-1.dsc
+ ab5c2cd79977e35545ccdf10c513cd66 616 misc optional hithere_1.0.orig.tar.gz
+ abce232591a70793ed9947ed86e3e560 721 misc optional hithere_1.0-1.debian.tar.gz
+ 516e330e901b3f6b5ec64cf6965ec73c 2840 misc optional hithere_1.0-1_i386.deb

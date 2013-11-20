@@ -1,0 +1,13 @@
+Source: hithere
+Maintainer: Lars Wirzenius <liw@liw.fi>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: 
+
+Package: hithere
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: greet user
+ hithere greets the user, or the world.
+

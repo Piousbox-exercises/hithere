@@ -1,0 +1,10 @@
+Package: hithere
+Version: 1.0-1
+Architecture: i386
+Maintainer: Lars Wirzenius <liw@liw.fi>
+Installed-Size: 52
+Depends: libc6 (>= 2.0)
+Section: misc
+Priority: optional
+Description: greet user
+ hithere greets the user, or the world.

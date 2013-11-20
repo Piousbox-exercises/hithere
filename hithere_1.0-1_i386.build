@@ -1,0 +1,101 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: set CFLAGS to default value: -g -O2
+dpkg-buildpackage: set CPPFLAGS to default value: 
+dpkg-buildpackage: set LDFLAGS to default value: -Wl,-Bsymbolic-functions
+dpkg-buildpackage: set FFLAGS to default value: -g -O2
+dpkg-buildpackage: set CXXFLAGS to default value: -g -O2
+dpkg-buildpackage: source package hithere
+dpkg-buildpackage: source version 1.0-1
+dpkg-buildpackage: source changed by piousbox <piousbox@piousbox-laptop>
+dpkg-buildpackage: host architecture i386
+ fakeroot debian/rules clean
+dh clean
+   dh_testdir
+   dh_auto_clean
+make[1]: Entering directory `/home/piousbox/projects/debian/hithere-1.0'
+rm -f hithere hithere.o
+make[1]: Leaving directory `/home/piousbox/projects/debian/hithere-1.0'
+   dh_clean
+ dpkg-source -b hithere-1.0
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building hithere using existing ./hithere_1.0.orig.tar.gz
+dpkg-source: info: building hithere in hithere_1.0-1.debian.tar.gz
+dpkg-source: info: building hithere in hithere_1.0-1.dsc
+ debian/rules build
+dh build
+   dh_testdir
+   dh_auto_configure
+   dh_auto_build
+make[1]: Entering directory `/home/piousbox/projects/debian/hithere-1.0'
+cc --std=c99  -Wl,-Bsymbolic-functions  hithere.c   -o hithere
+make[1]: Leaving directory `/home/piousbox/projects/debian/hithere-1.0'
+   dh_auto_test
+ fakeroot debian/rules binary
+dh binary
+   dh_testroot
+   dh_prep
+   dh_installdirs
+   debian/rules override_dh_auto_install
+make[1]: Entering directory `/home/piousbox/projects/debian/hithere-1.0'
+/usr/bin/make DESTDIR=$(pwd)/debian/hithere prefix=/usr install
+make[2]: Entering directory `/home/piousbox/projects/debian/hithere-1.0'
+install hithere /home/piousbox/projects/debian/hithere-1.0/debian/hithere/usr/bin
+install -m 0644 hithere.1 /home/piousbox/projects/debian/hithere-1.0/debian/hithere/usr/share/man/man1
+make[2]: Leaving directory `/home/piousbox/projects/debian/hithere-1.0'
+make[1]: Leaving directory `/home/piousbox/projects/debian/hithere-1.0'
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_installexamples
+   dh_installman
+   dh_installcatalogs
+   dh_installcron
+   dh_installdebconf
+   dh_installemacsen
+   dh_installifupdown
+   dh_installinfo
+   dh_pysupport
+   dh_installinit
+   dh_installmenu
+   dh_installmime
+   dh_installmodules
+   dh_installlogcheck
+   dh_installlogrotate
+   dh_installpam
+   dh_installppp
+   dh_installudev
+   dh_installwm
+   dh_installxfonts
+   dh_bugfiles
+   dh_lintian
+   dh_gconf
+   dh_icons
+   dh_perl
+   dh_usrlocal
+   dh_link
+   dh_compress
+   dh_fixperms
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package `hithere' in `../hithere_1.0-1_i386.deb'.
+ dpkg-genchanges  >../hithere_1.0-1_i386.changes
+dpkg-genchanges: including full source code in upload
+dpkg-buildpackage: full upload (original source is included)
+Now running lintian...
+E: hithere_1.0-1_i386.changes: changed-by-address-malformed piousbox <piousbox@piousbox-laptop>
+E: hithere source: package-uses-debhelper-but-lacks-build-depends
+W: hithere source: package-lacks-versioned-build-depends-on-debhelper 7
+W: hithere source: changelog-should-mention-nmu
+W: hithere source: source-nmu-has-incorrect-version-number 1.0-1
+W: hithere source: newer-standards-version 3.9.2 (current is 3.8.4)
+E: hithere: debian-changelog-file-contains-invalid-email-address piousbox@piousbox-laptop
+W: hithere: new-package-should-close-itp-bug
+W: hithere: wrong-bug-number-in-closes l3:#XXXXXX
+W: hithere: copyright-without-copyright-notice
+W: hithere: zero-byte-file-in-doc-directory usr/share/doc/hithere/copyright
+Finished running lintian.
